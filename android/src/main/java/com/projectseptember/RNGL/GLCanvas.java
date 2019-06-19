@@ -868,7 +868,7 @@ public class GLCanvas extends GLSurfaceView
     }
 
     private Bitmap createSnapshot () {
-        return createSnapshot(0, 0, renderData.width, renderData.height);
+        return createSnapshot(0, 0, this.getCanvasWidth(), this.getCanvasHeight());
     }
 
     private Bitmap createSnapshot (int x, int y, int w, int h) {
@@ -927,4 +927,12 @@ public class GLCanvas extends GLSurfaceView
         int height = (int) (h * pixelRatio / displayDensity);
         getHolder().setFixedSize(width, height);
     }
-}
+
+    private int getCanvasWidth() {
+        return (int)(data.width * data.pixelRatio);
+    }
+
+    private int getCanvasHeight() {
+        return (int)(data.height * data.pixelRatio);
+    }
+ }
