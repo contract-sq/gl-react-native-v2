@@ -30,6 +30,7 @@ npm-debug.log
 # android
 #
 android/build/
+.idea
 android/.gradle/
 android/.idea/
 android/android.iml
